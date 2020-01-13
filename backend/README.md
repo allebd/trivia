@@ -117,7 +117,7 @@ GET '/categories'
 ***********************************************************************************************************************************
 
 GET '/questions'
-- Fetches a list of questions, number of total questions, current category, categories including pagination (every 10 questions)
+- Fetches a list of questions, number of total questions, current category, categories including pagination (every 10 questions).
 - Request Arguments: None
 - Returns: An object with keys: success, question, total_questions, categories.
 {
@@ -226,7 +226,7 @@ GET '/questions'
 ***********************************************************************************************************************************
 
 DELETE '/questions/{question_id}'
-- DELETE question using a question ID
+- Deletes a question using a question ID.
 - Request Arguments: question_id
 - Returns: An object with keys: success, deleted, total_questions, questions.
 {
@@ -310,7 +310,7 @@ DELETE '/questions/{question_id}'
 ***********************************************************************************************************************************
 
 POST '/questions'
-- POST a new question
+- Creates a new question.
 - Request Arguments:
     {
       "question": <str>,
@@ -398,7 +398,7 @@ POST '/questions'
 ***********************************************************************************************************************************
 
 POST '/questions/search'
-- Fetch questions based on a search term
+- Fetches a question based on a search term
 - Request Arguments:
     {
       "searchTerm": <str>
@@ -483,7 +483,7 @@ POST '/questions/search'
 ***********************************************************************************************************************************
 
 GET '/categories/{category_id}/questions'
-- Fetch questions based on category
+- Fetches questions based on category.
 - Request Arguments:
     {
       "category_id": <int> 1-6
@@ -521,7 +521,7 @@ GET '/categories/{category_id}/questions'
 ***********************************************************************************************************************************
 
 POST '/quizzes'
-- Fetch questions to play the quiz and should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions.
+- Fetches questions to play the quiz and should take category and previous question parameters and return a random questions within the given category, if provided, and that is not one of the previous questions.
 - Request Body:
     {
       "previous_questions": [],
